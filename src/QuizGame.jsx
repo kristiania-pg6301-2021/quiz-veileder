@@ -3,11 +3,15 @@ import React from "react";
 export function QuizGame() {
   const quiz = quizzes[0];
 
+  function handleClick(answerIndex) {
+    alert(answerIndex === quiz.indexOfRightAnswer ? "the answer is correct" : "the answer is wrong - you are stupid")
+  }
+
   return (
     <div>
       <div>{quiz.question}</div>
-      {quiz.answers.map((a) => (
-        <li>{a}</li>
+      {quiz.answers.map((a, index) => (
+        <li key={index} onClick={() => handleClick(index)}>{a}</li>
       ))}
     </div>
   );
