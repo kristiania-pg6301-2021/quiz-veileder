@@ -1,4 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { QuizGame } from './QuizGame';
 
-ReactDOM.render(<h1>Hey veiledere</h1>, document.getElementById("root"));
+
+ReactDOM.render(<QuizGame/>, document.getElementById("root"));
