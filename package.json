@@ -1,0 +1,23 @@
+{
+  "name": "veiledning-quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristiania-pg6301-2021/quiz-veileder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kristiania-pg6301-2021/quiz-veileder/issues"
+  },
+  "homepage": "https://github.com/kristiania-pg6301-2021/quiz-veileder#readme",
+  "devDependencies": {
+    "parcel": "2.0.0-beta.2"
+  }
+}
