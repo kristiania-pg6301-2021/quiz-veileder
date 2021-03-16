@@ -1,20 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 
 export function QuizGame() {
   const quiz = quizzes[0];
-
+  const [answerGiven, setAnswerGiven] = useState();
+  
   function handleClick(answerIndex) {
-    alert(answerIndex === quiz.indexOfRightAnswer ? "the answer is correct" : "the answer is wrong - you are stupid")
+    setAnswerGiven(answerIndex);
   }
-
-  return (
-    <div>
-      <div>{quiz.question}</div>
-      {quiz.answers.map((a, index) => (
-        <li key={index} onClick={() => handleClick(index)}>{a}</li>
-      ))}
-    </div>
-  );
+  
+  if (answerGiven === undefined) {
+    return (
+        <div>
+          <div>{quiz.question}</div>
+          {quiz.answers.map((a, index) => (
+              <li key={index} onClick={() => handleClick(index)}>{a}</li>
+          ))}
+        </div>
+    );
+  } else if (answerGiven === quiz.indexOfRightAnswer) {
+    return <div>The answer is correct</div>
+  } else {
+    return <div>The answer is wrong, but don't feel bad</div>
+  }
 }
 
 const quizzes = [
